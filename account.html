@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>账户中心 - FASHION STORE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-left">
+            <a href="women.html">女装</a>
+            <a href="men.html">男装</a>
+            <a href="recycling.html">可回收衣物计划</a>
+            <a href="remake.html">创意改造</a>
+        </div>
+        <div class="logo">
+            <h1><a href="index.html">FASHION STORE</a></h1>
+        </div>
+        <div class="nav-right">
+            <a href="#search">搜索</a>
+            <a href="account.html">账户</a>
+            <a href="#cart">购物袋</a>
+        </div>
+    </nav>
+
+    <header class="account-header">
+        <div class="account-header-content">
+            <h2>账户中心</h2>
+            <p>管理您的个人信息、代币余额和订单</p>
+        </div>
+    </header>
+
+    <main class="account-main">
+        <div class="account-sidebar">
+            <ul class="account-menu">
+                <li class="active"><a href="#profile">个人信息</a></li>
+                <li><a href="#tokens">代币余额</a></li>
+                <li><a href="#orders">我的订单</a></li>
+                <li><a href="#remake-orders">改造订单</a></li>
+            </ul>
+            <a href="#logout" class="logout-btn">退出登录</a>
+        </div>
+
+        <div class="account-content">
+            <!-- 个人信息模块 -->
+            <section id="profile" class="account-section active">
+                <h2 class="section-title">个人信息</h2>
+                <form class="profile-form">
+                    <div class="form-group">
+                        <label for="email">邮箱</label>
+                        <input type="email" id="email" value="user@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" value="张三">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">手机号码</label>
+                        <input type="tel" id="phone" value="138****1234">
+                    </div>
+                    <div class="form-group">
+                        <label for="current-password">当前密码</label>
+                        <input type="password" id="current-password">
+                    </div>
+                    <div class="form-group">
+                        <label for="new-password">新密码</label>
+                        <input type="password" id="new-password">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">确认新密码</label>
+                        <input type="password" id="confirm-password">
+                    </div>
+                    <button type="submit" class="primary-btn">保存更改</button>
+                </form>
+            </section>
+
+            <!-- 代币余额模块 -->
+            <section id="tokens" class="account-section">
+                <h2 class="section-title">代币余额</h2>
+                <div class="token-display account-token-display">
+                    <div class="token-amount">
+                        <h3>320</h3>
+                        <p>可用代币</p>
+                    </div>
+                    <div class="token-details">
+                        <div class="token-info">
+                            <p>您的代币可用于抵扣创意改造服务费用。根据衣物材质和数量，不同类型的旧衣物可获得不同数量的代币。</p>
+                            <ul class="token-value-list">
+                                <li><span>棉、麻类面料：</span>10-30代币/件</li>
+                                <li><span>羊毛、羊绒类面料：</span>30-60代币/件</li>
+                                <li><span>丝绸、真皮类面料：</span>50-100代币/件</li>
+                                <li><span>合成纤维：</span>5-15代币/件</li>
+                            </ul>
+                        </div>
+                        <a href="recycling.html" class="cta-button">继续回收衣物</a>
+                    </div>
+                </div>
+
+                <div class="token-history">
+                    <h3>代币历史记录</h3>
+                    <table class="token-table">
+                        <thead>
+                            <tr>
+                                <th>日期</th>
+                                <th>类型</th>
+                                <th>数量</th>
+                                <th>详情</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2024-06-15</td>
+                                <td>获得</td>
+                                <td>+120</td>
+                                <td>回收3件羊毛衫和2件牛仔裤</td>
+                            </tr>
+                            <tr>
+                                <td>2024-06-02</td>
+                                <td>使用</td>
+                                <td>-200</td>
+                                <td>牛仔夹克改造服务</td>
+                            </tr>
+                            <tr>
+                                <td>2024-05-20</td>
+                                <td>获得</td>
+                                <td>+400</td>
+                                <td>回收1件皮夹克和5件丝绸衬衫</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 订单模块 -->
+            <section id="orders" class="account-section">
+                <h2 class="section-title">我的订单</h2>
+                <div class="orders-list">
+                    <div class="order-item">
+                        <div class="order-header">
+                            <div class="order-info">
+                                <span class="order-number">订单号: 20240615-87432</span>
+                                <span class="order-date">2024-06-15</span>
+                            </div>
+                            <span class="order-status delivered">已送达</span>
+                        </div>
+                        <div class="order-products">
+                            <div class="order-product">
+                                <img src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?ixlib=rb-4.0.3" alt="产品图片">
+                                <div class="product-info">
+                                    <h4>纯棉T恤</h4>
+                                    <p>尺码: M | 颜色: 白色</p>
+                                    <p class="product-price">¥199 x 2</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-total">
+                            <span>订单总计: ¥398</span>
+                            <a href="#track" class="secondary-btn">查看物流</a>
+                        </div>
+                    </div>
+                    
+                    <div class="order-item">
+                        <div class="order-header">
+                            <div class="order-info">
+                                <span class="order-number">订单号: 20240602-54321</span>
+                                <span class="order-date">2024-06-02</span>
+                            </div>
+                            <span class="order-status processing">处理中</span>
+                        </div>
+                        <div class="order-products">
+                            <div class="order-product">
+                                <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3" alt="产品图片">
+                                <div class="product-info">
+                                    <h4>羊毛大衣</h4>
+                                    <p>尺码: L | 颜色: 灰色</p>
+                                    <p class="product-price">¥899</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-total">
+                            <span>订单总计: ¥899</span>
+                            <a href="#cancel" class="secondary-btn">取消订单</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 改造订单模块 -->
+            <section id="remake-orders" class="account-section">
+                <h2 class="section-title">改造订单</h2>
+                <div class="orders-list">
+                    <div class="order-item remake-order">
+                        <div class="order-header">
+                            <div class="order-info">
+                                <span class="order-number">改造单号: RM-20240602-001</span>
+                                <span class="order-date">2024-06-02</span>
+                            </div>
+                            <span class="order-status processing">制作中</span>
+                        </div>
+                        <div class="order-details">
+                            <div class="remake-details">
+                                <h4>牛仔夹克改造</h4>
+                                <p>设计师: 张明</p>
+                                <p>改造内容: 将旧牛仔夹克改造为时尚背心</p>
+                                <p>使用代币: 200</p>
+                                <p>额外费用: ¥99</p>
+                            </div>
+                            <div class="remake-status">
+                                <div class="status-timeline">
+                                    <div class="status-point active">预约咨询</div>
+                                    <div class="status-point active">设计确认</div>
+                                    <div class="status-point current">制作中</div>
+                                    <div class="status-point">完成</div>
+                                    <div class="status-point">交付</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="no-orders" style="display: none;">
+                    <p>您还没有任何改造订单</p>
+                    <a href="remake.html" class="cta-button">开始创意改造</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>帮助</h4>
+                <a href="#shop">购物指南</a>
+                <a href="#delivery">配送信息</a>
+                <a href="#returns">退换货政策</a>
+            </div>
+            <div class="footer-section">
+                <h4>关于我们</h4>
+                <a href="#about">公司介绍</a>
+                <a href="#careers">加入我们</a>
+                <a href="#sustainability">可持续发展</a>
+            </div>
+            <div class="footer-section">
+                <h4>联系我们</h4>
+                <a href="#contact">客户服务</a>
+                <a href="#stores">门店查询</a>
+                <a href="#social">社交媒体</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 FASHION STORE. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 账户页面标签切换
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuItems = document.querySelectorAll('.account-menu li a');
+            const sections = document.querySelectorAll('.account-section');
+            
+            menuItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // 移除所有激活状态
+                    menuItems.forEach(menuItem => {
+                        menuItem.parentElement.classList.remove('active');
+                    });
+                    sections.forEach(section => {
+                        section.classList.remove('active');
+                    });
+                    
+                    // 设置当前项为激活状态
+                    this.parentElement.classList.add('active');
+                    
+                    // 显示相应的内容部分
+                    const targetId = this.getAttribute('href').substring(1);
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

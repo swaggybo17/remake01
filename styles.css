@@ -1,0 +1,1249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+/* 导航栏样式 */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    gap: 2rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.main-nav a:hover {
+    color: #666;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+/* Logo链接样式 */
+.logo h1 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 当前页面导航链接样式 */
+.main-nav a.active {
+    border-bottom: 2px solid #1a1a1a;
+}
+
+/* 英雄区域样式 */
+.hero {
+    height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                url('https://picsum.photos/1920/1080?random=10');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content {
+    padding: 2rem;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    color: #1a1a1a;
+    text-decoration: none;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+/* 分类导航 */
+.category-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.category-btn {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    background: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.category-btn.active {
+    border-bottom: 2px solid #1a1a1a;
+}
+
+.category-btn:hover {
+    color: #666;
+}
+
+/* 商品网格 */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.02);
+}
+
+.item-details {
+    padding: 1rem 0;
+}
+
+.item-details h3 {
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.item-details p {
+    color: #666;
+}
+
+/* 模态框样式 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.95);
+}
+
+.modal-content {
+    display: flex;
+    max-width: 1200px;
+    margin: 2rem auto;
+    position: relative;
+    background: #fff;
+    padding: 2rem;
+}
+
+.modal-content img {
+    max-width: 60%;
+    height: auto;
+    object-fit: cover;
+}
+
+.product-details {
+    padding: 2rem;
+    width: 40%;
+}
+
+.product-details h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.size-selector {
+    margin: 2rem 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.size-selector button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ddd;
+    background: none;
+    cursor: pointer;
+}
+
+.size-selector button:hover {
+    border-color: #1a1a1a;
+}
+
+.add-to-cart {
+    width: 100%;
+    padding: 1rem;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.add-to-cart:hover {
+    background-color: #333;
+}
+
+.close-button {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #1a1a1a;
+}
+
+/* 页脚样式 */
+footer {
+    margin-top: 4rem;
+    background-color: #f8f8f8;
+    padding: 4rem 2rem 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h4 {
+    margin-bottom: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-section a {
+    display: block;
+    color: #666;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a:hover {
+    color: #1a1a1a;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+/* 分类卡片样式 */
+.featured-categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.category-card {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 3/4;
+    cursor: pointer;
+}
+
+.category-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.category-card:hover img {
+    transform: scale(1.05);
+}
+
+.category-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: #fff;
+    text-align: center;
+}
+
+.category-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.category-link {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #fff;
+    color: #1a1a1a;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.category-link:hover {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+/* 热门单品部分 */
+.trending {
+    padding: 4rem 2rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .main-nav {
+        padding: 1rem;
+    }
+
+    .nav-left, .nav-right {
+        gap: 1rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .modal-content {
+        flex-direction: column;
+        margin: 1rem;
+    }
+
+    .modal-content img {
+        max-width: 100%;
+    }
+
+    .product-details {
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .gallery {
+        padding: 0 1rem;
+    }
+
+    .featured-categories {
+        grid-template-columns: 1fr;
+    }
+
+    .category-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* 可持续发展页面样式 */
+.recycling-hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+                url('https://images.unsplash.com/photo-1523381294911-8d3cead13475?ixlib=rb-4.0.3');
+    background-position: center 30%;
+}
+
+.recycling-hero .hero-content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.recycling-hero h2 {
+    font-size: 4rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.recycling-hero p {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.recycling-main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.intro-section {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 6rem;
+}
+
+.intro-section h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+}
+
+.intro-section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #666;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 4rem;
+    color: #1a1a1a;
+}
+
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-bottom: 6rem;
+}
+
+.step {
+    text-align: center;
+    padding: 2rem;
+    background: #f8f8f8;
+    transition: transform 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-10px);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background: #1a1a1a;
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 auto 2rem;
+}
+
+.step-content h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.step-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.impact {
+    background: #f8f8f8;
+    padding: 6rem 2rem;
+    margin: 6rem -2rem;
+}
+
+.impact-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.stat-card h3 {
+    font-size: 3rem;
+    font-weight: 300;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.stat-card p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.faq {
+    padding: 6rem 0;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: #f8f8f8;
+    transition: transform 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateX(10px);
+}
+
+.faq-item h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.faq-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.cta-section {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: #1a1a1a;
+    margin: 0 -2rem;
+    color: #fff;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-section .cta-button {
+    background: #fff;
+    color: #1a1a1a;
+    padding: 1.2rem 3rem;
+    font-size: 1.1rem;
+    border: 2px solid #fff;
+}
+
+.cta-section .cta-button:hover {
+    background: transparent;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .recycling-hero h2 {
+        font-size: 2.5rem;
+    }
+    
+    .recycling-hero p {
+        font-size: 1.2rem;
+    }
+    
+    .steps-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .impact-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .stat-card h3 {
+        font-size: 2.5rem;
+    }
+}
+
+/* 可持续发展页面样式 - 背景图片 */
+.section-with-bg {
+    position: relative;
+    z-index: 1;
+    padding: 6rem 2rem;
+    margin: 4rem -2rem;
+    overflow: hidden;
+}
+
+.section-with-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: -1;
+}
+
+.how-it-works-bg::before {
+    background-image: url('https://images.unsplash.com/photo-1604480133435-25b86862d276?ixlib=rb-4.0.3');
+}
+
+.impact-bg::before {
+    background-image: url('https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?ixlib=rb-4.0.3');
+}
+
+.faq-bg::before {
+    background-image: url('https://images.unsplash.com/photo-1553545985-1e0d8781d5db?ixlib=rb-4.0.3');
+}
+
+/* REMAKE按钮样式 */
+.remake-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: 2px solid #4CAF50;
+}
+
+.remake-btn:hover {
+    background-color: transparent;
+    color: #4CAF50;
+}
+
+/* CTA按钮容器 */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .section-with-bg {
+        padding: 4rem 1.5rem;
+        margin: 3rem -1.5rem;
+    }
+}
+
+/* Remake页面样式 */
+.remake-hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?ixlib=rb-4.0.3');
+    background-position: center;
+}
+
+.remake-main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+/* 设计师团队部分 */
+.designer-section {
+    text-align: center;
+}
+
+.designer-bg::before {
+    background-image: url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?ixlib=rb-4.0.3');
+}
+
+.designers-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.designer-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.designer-card:hover {
+    transform: translateY(-10px);
+}
+
+.designer-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+}
+
+.designer-card h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.designer-card p {
+    color: #666;
+}
+
+/* 代币部分 */
+.token-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: #f8f8f8;
+    margin: 4rem -2rem;
+}
+
+.token-display {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.token-amount {
+    margin-bottom: 2rem;
+}
+
+.token-amount h3 {
+    font-size: 4rem;
+    font-weight: 300;
+    color: #4CAF50;
+}
+
+.token-info {
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+/* 改造流程部分 */
+.process-section {
+    text-align: center;
+}
+
+.process-bg::before {
+    background-image: url('https://images.unsplash.com/photo-1545911825-6bfa5b0c34a9?ixlib=rb-4.0.3');
+}
+
+/* 作品展示部分 */
+.gallery-section {
+    padding: 4rem 0;
+}
+
+.remake-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .designers-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .remake-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .token-display {
+        padding: 1.5rem;
+    }
+    
+    .token-amount h3 {
+        font-size: 3rem;
+    }
+}
+
+/* 账户页面样式 */
+.account-header {
+    height: 30vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                url('https://images.unsplash.com/photo-1607082349566-187342175e2f?ixlib=rb-4.0.3');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.account-header-content {
+    padding: 2rem;
+}
+
+.account-header-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.account-main {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 3rem;
+}
+
+/* 账户侧边栏 */
+.account-sidebar {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.account-menu {
+    list-style: none;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.account-menu li {
+    border-bottom: 1px solid #eee;
+}
+
+.account-menu li:last-child {
+    border-bottom: none;
+}
+
+.account-menu li a {
+    display: block;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    color: #1a1a1a;
+    transition: all 0.3s ease;
+}
+
+.account-menu li a:hover {
+    background-color: #f8f8f8;
+}
+
+.account-menu li.active a {
+    background-color: #f0f0f0;
+    border-left: 3px solid #4CAF50;
+    font-weight: 500;
+}
+
+.logout-btn {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    background-color: #f8f8f8;
+    color: #666;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #eee;
+    color: #1a1a1a;
+}
+
+/* 账户内容区域 */
+.account-section {
+    display: none;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.account-section.active {
+    display: block;
+}
+
+/* 表单样式 */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.primary-btn {
+    padding: 0.8rem 2rem;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+    background-color: #388E3C;
+}
+
+.secondary-btn {
+    padding: 0.5rem 1rem;
+    background-color: #f8f8f8;
+    color: #1a1a1a;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.secondary-btn:hover {
+    background-color: #eee;
+}
+
+/* 代币模块样式 */
+.account-token-display {
+    display: flex;
+    margin-bottom: 3rem;
+    background: #f8f8f8;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.token-amount {
+    padding: 3rem;
+    background: #4CAF50;
+    color: #fff;
+    text-align: center;
+    min-width: 200px;
+}
+
+.token-details {
+    flex: 1;
+    padding: 2rem;
+}
+
+.token-value-list {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.token-value-list li {
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.token-value-list li span {
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.token-history {
+    margin-top: 3rem;
+}
+
+.token-history h3 {
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    color: #1a1a1a;
+}
+
+.token-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.token-table th, .token-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.token-table th {
+    background-color: #f8f8f8;
+    font-weight: 500;
+}
+
+/* 订单样式 */
+.order-item {
+    margin-bottom: 2rem;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #eee;
+}
+
+.order-number {
+    font-weight: 500;
+    margin-right: 1rem;
+}
+
+.order-date {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.order-status {
+    padding: 0.3rem 0.8rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.order-status.delivered {
+    background-color: #C8E6C9;
+    color: #2E7D32;
+}
+
+.order-status.processing {
+    background-color: #FFE0B2;
+    color: #E65100;
+}
+
+.order-products {
+    padding: 1rem;
+}
+
+.order-product {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.order-product img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.product-info h4 {
+    margin-bottom: 0.3rem;
+    font-weight: 400;
+}
+
+.product-price {
+    color: #1a1a1a;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+.order-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f8f8;
+    border-top: 1px solid #eee;
+}
+
+.order-total span {
+    font-weight: 500;
+}
+
+/* 改造订单特殊样式 */
+.remake-order .order-details {
+    padding: 1.5rem;
+}
+
+.remake-details h4 {
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.remake-details p {
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.status-timeline {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.status-timeline::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #ddd;
+    z-index: 1;
+}
+
+.status-point {
+    position: relative;
+    width: 80px;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 0.8rem;
+    color: #999;
+    z-index: 2;
+}
+
+.status-point::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ddd;
+    z-index: 3;
+}
+
+.status-point.active::before {
+    background-color: #4CAF50;
+}
+
+.status-point.current::before {
+    background-color: #4CAF50;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.3);
+}
+
+.no-orders {
+    text-align: center;
+    padding: 3rem;
+}
+
+.no-orders p {
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .account-main {
+        grid-template-columns: 1fr;
+    }
+    
+    .account-sidebar {
+        position: static;
+        margin-bottom: 2rem;
+    }
+    
+    .account-token-display {
+        flex-direction: column;
+    }
+    
+    .token-amount {
+        min-width: auto;
+    }
+    
+    .token-table th, .token-table td {
+        padding: 0.8rem 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .status-timeline {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 2rem;
+    }
+    
+    .status-timeline::before {
+        display: none;
+    }
+}
+
+/* 代币提醒样式 */
+.token-reminder {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #f8f8f8;
+    border-left: 3px solid #4CAF50;
+    color: #666;
+    font-style: italic;
+} 

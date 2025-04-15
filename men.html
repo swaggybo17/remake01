@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>男装 - FASHION STORE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-left">
+            <a href="women.html">女装</a>
+            <a href="men.html" class="active">男装</a>
+            <a href="recycling.html">可回收衣物计划</a>
+        </div>
+        <div class="logo">
+            <h1><a href="index.html">FASHION STORE</a></h1>
+        </div>
+        <div class="nav-right">
+            <a href="#search">搜索</a>
+            <a href="#account">账户</a>
+            <a href="#cart">购物袋</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h2>男装新品系列</h2>
+            <p>探索2024春季男装</p>
+            <a href="#new" class="cta-button">立即选购</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="category-nav">
+            <button class="category-btn active">全部</button>
+            <button class="category-btn">新品</button>
+            <button class="category-btn">外套</button>
+            <button class="category-btn">衬衫</button>
+            <button class="category-btn">针织衫</button>
+            <button class="category-btn">裤装</button>
+            <button class="category-btn">西装</button>
+        </section>
+
+        <div class="gallery" id="gallery">
+            <div class="gallery-item">
+                <img src="https://picsum.photos/600/800?random=7" alt="西装外套">
+                <div class="item-details">
+                    <h3>修身西装外套</h3>
+                    <p>¥ 899</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/600/800?random=8" alt="衬衫">
+                <div class="item-details">
+                    <h3>纯棉商务衬衫</h3>
+                    <p>¥ 299</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/600/800?random=9" alt="针织衫">
+                <div class="item-details">
+                    <h3>羊毛V领毛衣</h3>
+                    <p>¥ 459</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/600/800?random=10" alt="休闲裤">
+                <div class="item-details">
+                    <h3>直筒休闲裤</h3>
+                    <p>¥ 399</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/600/800?random=11" alt="夹克">
+                <div class="item-details">
+                    <h3>飞行员夹克</h3>
+                    <p>¥ 899</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/600/800?random=12" alt="牛仔裤">
+                <div class="item-details">
+                    <h3>修身牛仔裤</h3>
+                    <p>¥ 459</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 图片预览模态框 -->
+    <div class="modal" id="imageModal">
+        <span class="close-button">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage">
+            <div class="product-details">
+                <h2 id="modalTitle"></h2>
+                <p id="modalPrice"></p>
+                <div class="size-selector">
+                    <button>XS</button>
+                    <button>S</button>
+                    <button>M</button>
+                    <button>L</button>
+                    <button>XL</button>
+                </div>
+                <button class="add-to-cart">加入购物袋</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>帮助</h4>
+                <a href="#shop">购物指南</a>
+                <a href="#delivery">配送信息</a>
+                <a href="#returns">退换货政策</a>
+            </div>
+            <div class="footer-section">
+                <h4>关于我们</h4>
+                <a href="#about">公司介绍</a>
+                <a href="#careers">加入我们</a>
+                <a href="#sustainability">可持续发展</a>
+            </div>
+            <div class="footer-section">
+                <h4>联系我们</h4>
+                <a href="#contact">客户服务</a>
+                <a href="#stores">门店查询</a>
+                <a href="#social">社交媒体</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 FASHION STORE. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
